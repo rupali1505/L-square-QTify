@@ -1,14 +1,16 @@
-export default function Button() {
-  <button
+export default function Button({children}) {
+  return <button
     style={{
       fontFamily: "Poppins",
+      fontSize:"18px",
+      fontWeight:"600",
       backgroundColor: "black",
       borderRadius: "5px",
       color: "#34C94B",
-      borderLeft: "2px solid #34C94B ",
-      borderRight: "2px solid #34C94B ",
-    }}
+      height:"47px",
+      width:"170px"
+     }}
   >
-    Give Feedback
+   {children}
   </button>;
 }
