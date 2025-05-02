@@ -1,16 +1,7 @@
-export default function Button({children}) {
-  return <button
-    style={{
-      fontFamily: "Poppins",
-      fontSize:"18px",
-      fontWeight:"600",
-      backgroundColor: "black",
-      borderRadius: "5px",
-      color: "#34C94B",
-      height:"47px",
-      width:"170px"
-     }}
-  >
-   {children}
-  </button>;
+import React from "react";
+import styles from "./Button.module.css";
+
+
+export default function Button({children, onClick, ...props}) {
+  return <button className={styles.button} onClick={onClick} {...props}>{children}</button>;
 }
